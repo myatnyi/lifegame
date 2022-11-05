@@ -159,6 +159,10 @@ class Main(QMainWindow):
                 self.height = int(self.le_height.text())
                 self.grid = np.zeros((self.height, self.width), dtype=np.ushort)
                 self.repaint()
+
+                self.graph.clear()
+                self.generation = 1
+                self.population = np.array([np.count_nonzero(self.grid == self.heatAlive)])
         else:
             self.err_lbl_gen.setText('enter width and height')
             self.gen_btn.setEnabled(False)
@@ -211,8 +215,6 @@ class Main(QMainWindow):
                                   (self.size().height() - self.height * self.cell_size) // 2]
             self.scale = 1.0
             self.repaint()
-        elif event.key() == Qt.Key_Tab:
-            self.menu_box.setVisible(not self.menu_box.isVisible())
         elif event.key() == Qt.Key_F11:
             if self.fullScreen:
                 self.showNormal()
