@@ -19,4 +19,3 @@ def algorithm(width, height, grid, heatAlive):
         elif 0 < grid[j][i] <= heatAlive:
             grid_copy[j][i] = grid[j][i] - 1
     return grid_copy
-

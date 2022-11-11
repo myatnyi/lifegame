@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="sus1">
+    <file>sus/icon.png</file>
+    <file>sus/MorePerfectDOSVGA.ttf</file>
+  </qresource>
+</RCC>
