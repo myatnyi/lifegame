@@ -36,6 +36,7 @@ class Main(QMainWindow, Ui_MainWindow):
         self.grid = np.zeros((self.height, self.width))
         self.cell_color = QColor(255, 255, 255)
         self.heat_color = QColor(255, 255, 255)
+        self.menu_box.setMinimumWidth(self.menu_box.width() + self.scrollArea.verticalScrollBar().sizeHint().width())
         # Генерация
         self.le_width.textChanged.connect(self.width_height_input_err)
         self.le_height.textChanged.connect(self.width_height_input_err)

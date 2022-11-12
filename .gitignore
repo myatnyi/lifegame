@@ -1,7 +1,7 @@
 .idea/
 __pycache__/
 build/
-dist/
 venv/
 *.json
 *.ui
+*.db
